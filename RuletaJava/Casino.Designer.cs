@@ -437,6 +437,11 @@
             // nudApuesta
             // 
             this.nudApuesta.Location = new System.Drawing.Point(322, 35);
+            this.nudApuesta.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudApuesta.Name = "nudApuesta";
             this.nudApuesta.Size = new System.Drawing.Size(120, 22);
             this.nudApuesta.TabIndex = 10;
