@@ -29,9 +29,9 @@ namespace RuletaJava
 
             this.saldo = saldo;
 
-            
+
             posicion = miruleta.GenerarTirada();
-            
+
             numPremio = miruleta.NumPremio;
             color = "";
 
@@ -52,7 +52,8 @@ namespace RuletaJava
 
         }
 
-        public void ComprobarResultado() {
+        public void ComprobarResultado()
+        {
 
             switch (tipoApuesta)
             {
@@ -88,7 +89,7 @@ namespace RuletaJava
                     }
                     break;
 
-                    //Pares
+                //Pares
                 case "par":
                     if (miruleta.NumPremio % 2 == 0 && miruleta.NumPremio != 0)
                     {
@@ -120,7 +121,7 @@ namespace RuletaJava
                     }
                     break;
 
-                    //Falta Pasa
+                //Falta Pasa
                 case "falta":
                     if (miruleta.NumPremio >= 1 && miruleta.NumPremio <= 18)
                     {
@@ -152,9 +153,9 @@ namespace RuletaJava
                     }
                     break;
 
-                    //Numero
+                //Numero
                 case "numero":
-                    if (nudNumero.Value==int.Parse(lbNumPremio.Text))
+                    if (nudNumero.Value == int.Parse(lbNumPremio.Text))
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
@@ -254,8 +255,6 @@ namespace RuletaJava
             lbApuestaJugador.Text = "Par";
         }
 
-        
-
         private void rbImpar_CheckedChanged(object sender, EventArgs e)
         {
             tipoApuesta = "impar";
@@ -272,7 +271,7 @@ namespace RuletaJava
         {
             tipoApuesta = "pasa";
             lbApuestaJugador.Text = "Pasa";
-            MostrarResultado();
+            //Debugg MostrarResultado();
         }
 
         private void btnApostar_Click(object sender, EventArgs e)
@@ -286,18 +285,19 @@ namespace RuletaJava
 
             lbApuestaJugador.Text = tipoApuesta;
 
-            saldo-= apuesta;
+            saldo -= apuesta;
             lbSaldo.Text = "" + saldo;
 
             MostrarResultado();
             ComprobarResultado();
-            
+
         }
 
-        public void ResetResultados() {
+        public void ResetResultados()
+        {
             //Numero
             lbNumPremio.Text = "";
-            
+
             //Color
             lbColorPremio.Text = "";
 
