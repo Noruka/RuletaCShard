@@ -283,6 +283,8 @@ namespace RuletaJava
 
             apuesta = (int)nudApuesta.Value;
 
+            lbApuestaJugador.Text = tipoApuesta;
+
             saldo-= apuesta;
             lbSaldo.Text = "" + saldo;
 
