@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbMinMax = new System.Windows.Forms.Label();
             this.nudApuesta = new System.Windows.Forms.NumericUpDown();
             this.btnAceptar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudApuesta)).BeginInit();
@@ -45,14 +45,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cuanto dinero cambia a fichas?";
             // 
-            // label2
+            // lbMinMax
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(224, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Minimo 10 - Maximo 1000";
+            this.lbMinMax.AutoSize = true;
+            this.lbMinMax.Location = new System.Drawing.Point(224, 92);
+            this.lbMinMax.Name = "lbMinMax";
+            this.lbMinMax.Size = new System.Drawing.Size(127, 13);
+            this.lbMinMax.TabIndex = 2;
+            this.lbMinMax.Text = "Minimo 10 - Maximo 1000";
             // 
             // nudApuesta
             // 
@@ -93,7 +93,7 @@
             this.ClientSize = new System.Drawing.Size(598, 114);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.nudApuesta);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbMinMax);
             this.Controls.Add(this.label1);
             this.Name = "InsertarApuesta";
             this.Text = "InsertarApuesta";
@@ -106,7 +106,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbMinMax;
         private System.Windows.Forms.NumericUpDown nudApuesta;
         private System.Windows.Forms.Button btnAceptar;
     }

@@ -12,16 +12,20 @@ namespace RuletaJava
 {
     public partial class Casino : Form
     {
-        int numPremio, posicion, saldo, apuesta, cantidad;
+
+        //Variables globales.
+        int numPremio, posicion, saldo, apuesta;
         String color, tipoApuesta;
 
+        //Crea el objeto Ruleta mi ruleta para luego generar una tirada. Este objeto es global.
         Ruleta miruleta = new Ruleta();
 
         public Casino()
         {
             InitializeComponent();
-
         }
+
+        //Crea el objeto Casino micasino con el saldo introducido de la primera ventana.
 
         public Casino(int saldo)
         {
@@ -51,6 +55,92 @@ namespace RuletaJava
             }
 
         }
+
+        //Radio Botones
+        //Muestran y guardan el tipo de apuesta que se ha elegido.
+        //Colores
+
+        private void rbRojo_CheckedChanged(object sender, EventArgs e)
+        {
+            tipoApuesta = "rojo";
+            lbApuestaJugador.Text = "Rojo";
+        }
+
+        private void rbNegro_CheckedChanged(object sender, EventArgs e)
+        {
+            tipoApuesta = "negro";
+            lbApuestaJugador.Text = "Negro";
+        }
+
+        //Pares
+
+        private void rbPar_CheckedChanged(object sender, EventArgs e)
+        {
+            tipoApuesta = "par";
+            lbApuestaJugador.Text = "Par";
+        }
+
+        private void rbImpar_CheckedChanged(object sender, EventArgs e)
+        {
+            tipoApuesta = "impar";
+            lbApuestaJugador.Text = "Impar";
+        }
+
+        //Falta-Pasa
+
+        private void rbFalta_CheckedChanged(object sender, EventArgs e)
+        {
+            tipoApuesta = "falta";
+            lbApuestaJugador.Text = "Falta";
+        }
+
+        private void rbPasa_CheckedChanged(object sender, EventArgs e)
+        {
+            tipoApuesta = "pasa";
+            lbApuestaJugador.Text = "Pasa";
+            //Debugg MostrarResultado();
+        }
+
+        //Numero
+
+        private void rbNumero_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbNumero.Checked)
+            {
+                nudNumero.Enabled = true;
+                lbApuestaJugador.Text = "Numero";
+                tipoApuesta = "numero";
+            }
+            else
+            {
+                nudNumero.Enabled = false;
+                nudNumero.Value = 0;
+            }
+        }
+
+        //Ejecuta, bloquea y desbloquea las funciones y boton necesarios para ejecutar una apuesta.
+        //El minimo son 10 y el maximo es el saldo que tiene el usuario.
+        //Le resta lo apostado al saldo. Si gana se lo aplicara la subida que toca y se le volvera a sumar al saldo.
+        private void btnApostar_Click(object sender, EventArgs e)
+        {
+            btnRepetir.Enabled = true;
+            nudApuesta.Enabled = false;
+            btnApostar.Enabled = false;
+            gbApuestas.Enabled = false;
+
+            apuesta = (int)nudApuesta.Value;
+
+            lbApuestaJugador.Text = tipoApuesta;
+
+            saldo -= apuesta;
+            lbSaldo.Text = "" + saldo;
+
+            MostrarResultado();
+            ComprobarResultado();
+
+        }
+
+        //Funcion que comprueba el resultado y aplica la ganancia correspondiente al saldo.
 
         public void ComprobarResultado()
         {
@@ -170,12 +260,12 @@ namespace RuletaJava
                     }
                     break;
 
-
-
                 default:
                     MessageBox.Show("Error"); ComprobarResultado(); break;
             }
         }
+
+        //Funcion para mostrar el resultado. Se puede usar para debugging con algun Radio Button (ej. el boton Pasa)
 
         public void MostrarResultado()
         {
@@ -185,7 +275,7 @@ namespace RuletaJava
             //Color premiado
             if (posicion == 0)
             {
-                color = "Verde";
+                lbColorPremio.Text = "Verde";
                 miruleta.Color = "verde";
             }
             else
@@ -227,71 +317,7 @@ namespace RuletaJava
             }
         }
 
-        private void Casino_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void rbRojo_CheckedChanged(object sender, EventArgs e)
-        {
-            tipoApuesta = "rojo";
-            lbApuestaJugador.Text = "Rojo";
-        }
-
-        private void rbNegro_CheckedChanged(object sender, EventArgs e)
-        {
-            tipoApuesta = "negro";
-            lbApuestaJugador.Text = "Negro";
-        }
-
-        private void rbPar_CheckedChanged(object sender, EventArgs e)
-        {
-            tipoApuesta = "par";
-            lbApuestaJugador.Text = "Par";
-        }
-
-        private void rbImpar_CheckedChanged(object sender, EventArgs e)
-        {
-            tipoApuesta = "impar";
-            lbApuestaJugador.Text = "Impar";
-        }
-
-        private void rbFalta_CheckedChanged(object sender, EventArgs e)
-        {
-            tipoApuesta = "falta";
-            lbApuestaJugador.Text = "Falta";
-        }
-
-        private void rbPasa_CheckedChanged(object sender, EventArgs e)
-        {
-            tipoApuesta = "pasa";
-            lbApuestaJugador.Text = "Pasa";
-            //Debugg MostrarResultado();
-        }
-
-        private void btnApostar_Click(object sender, EventArgs e)
-        {
-            btnRepetir.Enabled = true;
-            nudApuesta.Enabled = false;
-            btnApostar.Enabled = false;
-            gbApuestas.Enabled = false;
-
-            apuesta = (int)nudApuesta.Value;
-
-            lbApuestaJugador.Text = tipoApuesta;
-
-            saldo -= apuesta;
-            lbSaldo.Text = "" + saldo;
-
-            MostrarResultado();
-            ComprobarResultado();
-
-        }
+        //Reiniciar los resultados
 
         public void ResetResultados()
         {
@@ -314,6 +340,8 @@ namespace RuletaJava
             lbResultado.Text = "";
 
         }
+
+        //Repetir-Reiniciar partida y vuelve a tirar la ruleta.
 
         private void btnRepetir_Click(object sender, EventArgs e)
         {
@@ -346,19 +374,18 @@ namespace RuletaJava
             }
         }
 
-        private void rbNumero_CheckedChanged(object sender, EventArgs e)
+        //Cierran el programa
+
+        private void Casino_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (rbNumero.Checked)
-            {
-                nudNumero.Enabled = true;
-                lbApuestaJugador.Text = "numero";
-                tipoApuesta = "numero";
-            }
-            else
-            {
-                nudNumero.Enabled = false;
-                nudNumero.Value = 0;
-            }
+            Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
     }
 }
