@@ -61,7 +61,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
                     }
                     else
                     {
@@ -74,7 +74,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
                     }
                     else
                     {
@@ -89,7 +89,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
                     }
                     else
                     {
@@ -103,7 +103,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
                     }
                     else
                     {
@@ -118,7 +118,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
                     }
                     else
                     {
@@ -131,7 +131,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
                     }
                     else
                     {
@@ -146,7 +146,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 36;
+                        saldo += apuesta * 36;
                     }
                     else
                     {
@@ -265,6 +265,8 @@ namespace RuletaJava
             btnApostar.Enabled = false;
             gbApuestas.Enabled = false;
 
+            apuesta = (int)nudApuesta.Value;
+
             ComprobarResultado();
             MostrarResultado();
         }
@@ -275,7 +277,6 @@ namespace RuletaJava
             {
                 nudNumero.Enabled = true;
                 lbApuestaJugador.Text = "Numero";
-
             }
             else
             {
