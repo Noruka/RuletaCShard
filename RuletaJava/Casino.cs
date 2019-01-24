@@ -42,7 +42,8 @@ namespace RuletaJava
             if (rbNumero.Checked)
             {
                 nudNumero.Enabled = true;
-                lbApuestaJugador.Text = "Numero";
+                lbApuestaJugador.Text = "numero";
+                tipoApuesta = "numero";
             }
             else
             {
@@ -61,12 +62,14 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
+                        lbSaldo.Text = ("" + saldo);
                     }
                     else
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
+                        lbSaldo.Text = ("" + saldo);
                     }
                     break;
                 case "negro":
@@ -74,12 +77,14 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
+                        lbSaldo.Text = ("" + saldo);
                     }
                     else
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
+                        lbSaldo.Text = ("" + saldo);
                     }
                     break;
 
@@ -89,13 +94,14 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
+                        lbSaldo.Text = ("" + saldo);
                     }
                     else
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
-                        
+                        lbSaldo.Text = ("" + saldo);
                     }
                     break;
                 case "impar":
@@ -103,12 +109,14 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
+                        lbSaldo.Text = ("" + saldo);
                     }
                     else
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
+                        lbSaldo.Text = ("" + saldo);
                     }
                     break;
 
@@ -118,12 +126,14 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
+                        lbSaldo.Text = ("" + saldo);
                     }
                     else
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
+                        lbSaldo.Text = ("" + saldo);
                     }
                     break;
                 case "pasa":
@@ -131,27 +141,31 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 2;
+                        saldo += apuesta * 2;
+                        lbSaldo.Text = ("" + saldo);
                     }
                     else
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
+                        lbSaldo.Text = ("" + saldo);
                     }
                     break;
 
                     //Numero
                 case "numero":
-                    if (nudNumero.Value==miruleta.NumPremio)
+                    if (nudNumero.Value==posicion)
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo = saldo + apuesta * 36;
+                        saldo += apuesta * 36;
+                        lbSaldo.Text = ("" + saldo);
                     }
                     else
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
+                        lbSaldo.Text = ("" + saldo);
                     }
                     break;
 
@@ -240,6 +254,8 @@ namespace RuletaJava
             lbApuestaJugador.Text = "Par";
         }
 
+        
+
         private void rbImpar_CheckedChanged(object sender, EventArgs e)
         {
             tipoApuesta = "impar";
@@ -265,8 +281,63 @@ namespace RuletaJava
             btnApostar.Enabled = false;
             gbApuestas.Enabled = false;
 
-            ComprobarResultado();
+            apuesta = (int)nudApuesta.Value;
+
+            saldo-= apuesta;
+            lbSaldo.Text = "" + saldo;
+
             MostrarResultado();
+            ComprobarResultado();
+            
+        }
+
+        public void ResetResultados() {
+            //Numero
+            lbNumPremio.Text = "";
+            
+            //Color
+            lbColorPremio.Text = "";
+
+            //Par o Impar
+            lbParImparPremio.Text = "";
+
+            //Falta Pasa
+            lbFaltaPasaPremio.Text = "";
+
+            //Apuesta jugador
+            lbApuestaJugador.Text = "";
+
+            //Resultado
+            lbResultado.Text = "";
+
+        }
+
+        private void btnRepetir_Click(object sender, EventArgs e)
+        {
+
+            if (saldo < 1)
+            {
+                MessageBox.Show("Te has quedado sin saldo");
+
+            }
+            else
+            {
+                btnRepetir.Enabled = false;
+                nudApuesta.Enabled = true;
+                btnApostar.Enabled = true;
+                gbApuestas.Enabled = true;
+
+                nudApuesta.Maximum = saldo;
+                nudApuesta.Value = 0;
+                nudNumero.Value = 0;
+                ResetResultados();
+
+                lbSaldo.Text = "" + saldo;
+                posicion = miruleta.GenerarTirada();
+
+                numPremio = miruleta.NumPremio;
+                color = "";
+            }
         }
 
         private void rbNumero_CheckedChanged(object sender, EventArgs e)
@@ -274,8 +345,7 @@ namespace RuletaJava
             if (rbNumero.Checked)
             {
                 nudNumero.Enabled = true;
-                lbApuestaJugador.Text = "Numero";
-
+                lbApuestaJugador.Text = "numero";
             }
             else
             {

@@ -289,7 +289,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(32, 241);
+            this.label16.Location = new System.Drawing.Point(28, 241);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(80, 17);
@@ -308,7 +308,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(32, 198);
+            this.label14.Location = new System.Drawing.Point(28, 198);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(124, 17);
@@ -401,6 +401,7 @@
             this.btnRepetir.TabIndex = 5;
             this.btnRepetir.Text = "Volver a jugar";
             this.btnRepetir.UseVisualStyleBackColor = true;
+            this.btnRepetir.Click += new System.EventHandler(this.btnRepetir_Click);
             // 
             // btnExit
             // 
@@ -437,9 +438,19 @@
             // nudApuesta
             // 
             this.nudApuesta.Location = new System.Drawing.Point(322, 35);
+            this.nudApuesta.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.nudApuesta.Name = "nudApuesta";
             this.nudApuesta.Size = new System.Drawing.Size(120, 22);
             this.nudApuesta.TabIndex = 10;
+            this.nudApuesta.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // Casino
             // 
