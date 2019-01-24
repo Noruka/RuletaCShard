@@ -67,6 +67,7 @@ namespace RuletaJava
                     {
                         lbResultado.Text = "Has perdido!";
                         MessageBox.Show("Has perdido!");
+                        
                     }
                     break;
                 case "negro":
@@ -240,6 +241,8 @@ namespace RuletaJava
             lbApuestaJugador.Text = "Par";
         }
 
+        
+
         private void rbImpar_CheckedChanged(object sender, EventArgs e)
         {
             tipoApuesta = "impar";
@@ -267,8 +270,48 @@ namespace RuletaJava
 
             apuesta = (int)nudApuesta.Value;
 
-            ComprobarResultado();
+            saldo-= apuesta;
+            lbSaldo.Text = "" + saldo;
+
             MostrarResultado();
+            ComprobarResultado();
+            
+        }
+
+        public void ResetResultados() {
+            //Numero
+            lbNumPremio.Text = "";
+            
+            //Color
+            lbColorPremio.Text = "";
+
+            //Par o Impar
+            lbParImparPremio.Text = "";
+
+            //Falta Pasa
+            lbFaltaPasaPremio.Text = "";
+
+            //Apuesta jugador
+            lbApuestaJugador.Text = "";
+
+            //Resultado
+            lbResultado.Text = "";
+
+        }
+
+        private void btnRepetir_Click(object sender, EventArgs e)
+        {
+            btnRepetir.Enabled = false;
+            nudApuesta.Enabled = true;
+            btnApostar.Enabled = true;
+            gbApuestas.Enabled = true;
+
+            nudApuesta.Value = 0;
+            nudNumero.Value = 0;
+            ResetResultados();
+
+            lbSaldo.Text = "" + saldo;
+            miruleta.GenerarTirada();
         }
 
         private void rbNumero_CheckedChanged(object sender, EventArgs e)
