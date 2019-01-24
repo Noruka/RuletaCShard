@@ -330,6 +330,7 @@ namespace RuletaJava
                 gbApuestas.Enabled = true;
 
                 nudApuesta.Maximum = saldo;
+                nudApuesta.Minimum = 10;
                 nudApuesta.Value = 0;
                 nudNumero.Value = 0;
                 ResetResultados();
@@ -339,6 +340,8 @@ namespace RuletaJava
 
                 numPremio = miruleta.NumPremio;
                 color = "";
+
+
             }
         }
 
