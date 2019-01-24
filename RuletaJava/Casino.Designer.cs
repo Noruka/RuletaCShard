@@ -446,6 +446,11 @@
             this.nudApuesta.Name = "nudApuesta";
             this.nudApuesta.Size = new System.Drawing.Size(120, 22);
             this.nudApuesta.TabIndex = 10;
+            this.nudApuesta.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // Casino
             // 
