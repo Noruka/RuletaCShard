@@ -31,7 +31,7 @@ namespace RuletaJava
 
             
             posicion = miruleta.GenerarTirada();
-
+            
             numPremio = miruleta.NumPremio;
             color = "";
 
@@ -154,11 +154,11 @@ namespace RuletaJava
 
                     //Numero
                 case "numero":
-                    if (nudNumero.Value==posicion)
+                    if (nudNumero.Value==int.Parse(lbNumPremio.Text))
                     {
                         lbResultado.Text = "Has ganado!";
                         MessageBox.Show("Has ganado!");
-                        saldo += apuesta * 36;
+                        saldo = saldo + apuesta * 36;
                         lbSaldo.Text = ("" + saldo);
                     }
                     else
@@ -272,6 +272,7 @@ namespace RuletaJava
         {
             tipoApuesta = "pasa";
             lbApuestaJugador.Text = "Pasa";
+            MostrarResultado();
         }
 
         private void btnApostar_Click(object sender, EventArgs e)
@@ -331,7 +332,7 @@ namespace RuletaJava
 
                 nudApuesta.Maximum = saldo;
                 nudApuesta.Minimum = 10;
-                nudApuesta.Value = 0;
+                nudApuesta.Value = 10;
                 nudNumero.Value = 0;
                 ResetResultados();
 
@@ -351,6 +352,7 @@ namespace RuletaJava
             {
                 nudNumero.Enabled = true;
                 lbApuestaJugador.Text = "numero";
+                tipoApuesta = "numero";
             }
             else
             {
