@@ -71,10 +71,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 25);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Saldo:";
             // 
@@ -82,10 +81,9 @@
             // 
             this.lbSaldo.AutoSize = true;
             this.lbSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSaldo.Location = new System.Drawing.Point(115, 30);
-            this.lbSaldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSaldo.Location = new System.Drawing.Point(86, 24);
             this.lbSaldo.Name = "lbSaldo";
-            this.lbSaldo.Size = new System.Drawing.Size(26, 25);
+            this.lbSaldo.Size = new System.Drawing.Size(20, 20);
             this.lbSaldo.TabIndex = 2;
             this.lbSaldo.Text = "X";
             // 
@@ -103,11 +101,9 @@
             this.gbApuestas.Controls.Add(this.label4);
             this.gbApuestas.Controls.Add(this.label3);
             this.gbApuestas.Controls.Add(this.label2);
-            this.gbApuestas.Location = new System.Drawing.Point(40, 84);
-            this.gbApuestas.Margin = new System.Windows.Forms.Padding(4);
+            this.gbApuestas.Location = new System.Drawing.Point(30, 68);
             this.gbApuestas.Name = "gbApuestas";
-            this.gbApuestas.Padding = new System.Windows.Forms.Padding(4);
-            this.gbApuestas.Size = new System.Drawing.Size(349, 361);
+            this.gbApuestas.Size = new System.Drawing.Size(262, 293);
             this.gbApuestas.TabIndex = 3;
             this.gbApuestas.TabStop = false;
             this.gbApuestas.Text = "Apuestas";
@@ -116,10 +112,9 @@
             // 
             this.rbNumero.AutoSize = true;
             this.rbNumero.Checked = true;
-            this.rbNumero.Location = new System.Drawing.Point(27, 310);
-            this.rbNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.rbNumero.Location = new System.Drawing.Point(20, 252);
             this.rbNumero.Name = "rbNumero";
-            this.rbNumero.Size = new System.Drawing.Size(79, 21);
+            this.rbNumero.Size = new System.Drawing.Size(62, 17);
             this.rbNumero.TabIndex = 17;
             this.rbNumero.TabStop = true;
             this.rbNumero.Text = "Numero";
@@ -129,10 +124,9 @@
             // rbPasa
             // 
             this.rbPasa.AutoSize = true;
-            this.rbPasa.Location = new System.Drawing.Point(175, 236);
-            this.rbPasa.Margin = new System.Windows.Forms.Padding(4);
+            this.rbPasa.Location = new System.Drawing.Point(131, 192);
             this.rbPasa.Name = "rbPasa";
-            this.rbPasa.Size = new System.Drawing.Size(61, 21);
+            this.rbPasa.Size = new System.Drawing.Size(49, 17);
             this.rbPasa.TabIndex = 16;
             this.rbPasa.Text = "Pasa";
             this.rbPasa.UseVisualStyleBackColor = true;
@@ -141,10 +135,9 @@
             // rbFalta
             // 
             this.rbFalta.AutoSize = true;
-            this.rbFalta.Location = new System.Drawing.Point(27, 236);
-            this.rbFalta.Margin = new System.Windows.Forms.Padding(4);
+            this.rbFalta.Location = new System.Drawing.Point(20, 192);
             this.rbFalta.Name = "rbFalta";
-            this.rbFalta.Size = new System.Drawing.Size(60, 21);
+            this.rbFalta.Size = new System.Drawing.Size(48, 17);
             this.rbFalta.TabIndex = 15;
             this.rbFalta.Text = "Falta";
             this.rbFalta.UseVisualStyleBackColor = true;
@@ -153,10 +146,9 @@
             // rbImpar
             // 
             this.rbImpar.AutoSize = true;
-            this.rbImpar.Location = new System.Drawing.Point(175, 154);
-            this.rbImpar.Margin = new System.Windows.Forms.Padding(4);
+            this.rbImpar.Location = new System.Drawing.Point(131, 125);
             this.rbImpar.Name = "rbImpar";
-            this.rbImpar.Size = new System.Drawing.Size(64, 21);
+            this.rbImpar.Size = new System.Drawing.Size(51, 17);
             this.rbImpar.TabIndex = 14;
             this.rbImpar.Text = "Impar";
             this.rbImpar.UseVisualStyleBackColor = true;
@@ -165,10 +157,9 @@
             // rbPar
             // 
             this.rbPar.AutoSize = true;
-            this.rbPar.Location = new System.Drawing.Point(27, 154);
-            this.rbPar.Margin = new System.Windows.Forms.Padding(4);
+            this.rbPar.Location = new System.Drawing.Point(20, 125);
             this.rbPar.Name = "rbPar";
-            this.rbPar.Size = new System.Drawing.Size(51, 21);
+            this.rbPar.Size = new System.Drawing.Size(41, 17);
             this.rbPar.TabIndex = 13;
             this.rbPar.Text = "Par";
             this.rbPar.UseVisualStyleBackColor = true;
@@ -177,10 +168,9 @@
             // rbNegro
             // 
             this.rbNegro.AutoSize = true;
-            this.rbNegro.Location = new System.Drawing.Point(175, 70);
-            this.rbNegro.Margin = new System.Windows.Forms.Padding(4);
+            this.rbNegro.Location = new System.Drawing.Point(131, 57);
             this.rbNegro.Name = "rbNegro";
-            this.rbNegro.Size = new System.Drawing.Size(68, 21);
+            this.rbNegro.Size = new System.Drawing.Size(54, 17);
             this.rbNegro.TabIndex = 12;
             this.rbNegro.Text = "Negro";
             this.rbNegro.UseVisualStyleBackColor = true;
@@ -189,10 +179,9 @@
             // rbRojo
             // 
             this.rbRojo.AutoSize = true;
-            this.rbRojo.Location = new System.Drawing.Point(27, 70);
-            this.rbRojo.Margin = new System.Windows.Forms.Padding(4);
+            this.rbRojo.Location = new System.Drawing.Point(20, 57);
             this.rbRojo.Name = "rbRojo";
-            this.rbRojo.Size = new System.Drawing.Size(58, 21);
+            this.rbRojo.Size = new System.Drawing.Size(47, 17);
             this.rbRojo.TabIndex = 11;
             this.rbRojo.Text = "Rojo";
             this.rbRojo.UseVisualStyleBackColor = true;
@@ -201,54 +190,49 @@
             // nudNumero
             // 
             this.nudNumero.Enabled = false;
-            this.nudNumero.Location = new System.Drawing.Point(177, 306);
-            this.nudNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.nudNumero.Location = new System.Drawing.Point(133, 249);
             this.nudNumero.Maximum = new decimal(new int[] {
             36,
             0,
             0,
             0});
             this.nudNumero.Name = "nudNumero";
-            this.nudNumero.Size = new System.Drawing.Size(69, 22);
+            this.nudNumero.Size = new System.Drawing.Size(52, 20);
             this.nudNumero.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 277);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(6, 225);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 17);
+            this.label5.Size = new System.Drawing.Size(84, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Apostar numero:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 199);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(6, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 17);
+            this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Apostar Falta o Pasa:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 114);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 17);
+            this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Apostar Pares o Impares:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Apostar Color:";
             // 
@@ -267,11 +251,9 @@
             this.gbResultados.Controls.Add(this.lbNumPremio);
             this.gbResultados.Controls.Add(this.label6);
             this.gbResultados.Enabled = false;
-            this.gbResultados.Location = new System.Drawing.Point(397, 84);
-            this.gbResultados.Margin = new System.Windows.Forms.Padding(4);
+            this.gbResultados.Location = new System.Drawing.Point(298, 68);
             this.gbResultados.Name = "gbResultados";
-            this.gbResultados.Padding = new System.Windows.Forms.Padding(4);
-            this.gbResultados.Size = new System.Drawing.Size(387, 361);
+            this.gbResultados.Size = new System.Drawing.Size(290, 293);
             this.gbResultados.TabIndex = 4;
             this.gbResultados.TabStop = false;
             this.gbResultados.Text = "Resultados";
@@ -279,115 +261,103 @@
             // lbResultado
             // 
             this.lbResultado.AutoSize = true;
-            this.lbResultado.Location = new System.Drawing.Point(285, 241);
-            this.lbResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbResultado.Location = new System.Drawing.Point(214, 196);
             this.lbResultado.Name = "lbResultado";
-            this.lbResultado.Size = new System.Drawing.Size(0, 17);
+            this.lbResultado.Size = new System.Drawing.Size(0, 13);
             this.lbResultado.TabIndex = 11;
             this.lbResultado.UseWaitCursor = true;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(28, 241);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(21, 196);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 17);
+            this.label16.Size = new System.Drawing.Size(61, 13);
             this.label16.TabIndex = 10;
             this.label16.Text = "Resultado: ";
             // 
             // lbApuestaJugador
             // 
             this.lbApuestaJugador.AutoSize = true;
-            this.lbApuestaJugador.Location = new System.Drawing.Point(285, 198);
-            this.lbApuestaJugador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbApuestaJugador.Location = new System.Drawing.Point(214, 161);
             this.lbApuestaJugador.Name = "lbApuestaJugador";
-            this.lbApuestaJugador.Size = new System.Drawing.Size(0, 17);
+            this.lbApuestaJugador.Size = new System.Drawing.Size(0, 13);
             this.lbApuestaJugador.TabIndex = 9;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 198);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(21, 161);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 17);
+            this.label14.Size = new System.Drawing.Size(93, 13);
             this.label14.TabIndex = 8;
             this.label14.Text = "Apuesta Jugador: ";
             // 
             // lbFaltaPasaPremio
             // 
             this.lbFaltaPasaPremio.AutoSize = true;
-            this.lbFaltaPasaPremio.Location = new System.Drawing.Point(285, 153);
-            this.lbFaltaPasaPremio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbFaltaPasaPremio.Location = new System.Drawing.Point(214, 124);
             this.lbFaltaPasaPremio.Name = "lbFaltaPasaPremio";
-            this.lbFaltaPasaPremio.Size = new System.Drawing.Size(0, 17);
+            this.lbFaltaPasaPremio.Size = new System.Drawing.Size(0, 13);
             this.lbFaltaPasaPremio.TabIndex = 7;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(28, 153);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(21, 124);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 17);
+            this.label12.Size = new System.Drawing.Size(65, 13);
             this.label12.TabIndex = 6;
             this.label12.Text = "Falta/Pasa: ";
             // 
             // lbParImparPremio
             // 
             this.lbParImparPremio.AutoSize = true;
-            this.lbParImparPremio.Location = new System.Drawing.Point(285, 114);
-            this.lbParImparPremio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbParImparPremio.Location = new System.Drawing.Point(214, 93);
             this.lbParImparPremio.Name = "lbParImparPremio";
-            this.lbParImparPremio.Size = new System.Drawing.Size(0, 17);
+            this.lbParImparPremio.Size = new System.Drawing.Size(0, 13);
             this.lbParImparPremio.TabIndex = 5;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(28, 114);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(21, 93);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 17);
+            this.label10.Size = new System.Drawing.Size(60, 13);
             this.label10.TabIndex = 4;
             this.label10.Text = "Par/Impar: ";
             // 
             // lbColorPremio
             // 
             this.lbColorPremio.AutoSize = true;
-            this.lbColorPremio.Location = new System.Drawing.Point(285, 75);
-            this.lbColorPremio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbColorPremio.Location = new System.Drawing.Point(214, 61);
             this.lbColorPremio.Name = "lbColorPremio";
-            this.lbColorPremio.Size = new System.Drawing.Size(0, 17);
+            this.lbColorPremio.Size = new System.Drawing.Size(0, 13);
             this.lbColorPremio.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 73);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(21, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 17);
+            this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 2;
             this.label8.Text = "Color: ";
             // 
             // lbNumPremio
             // 
             this.lbNumPremio.AutoSize = true;
-            this.lbNumPremio.Location = new System.Drawing.Point(285, 39);
-            this.lbNumPremio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNumPremio.Location = new System.Drawing.Point(214, 32);
             this.lbNumPremio.Name = "lbNumPremio";
-            this.lbNumPremio.Size = new System.Drawing.Size(0, 17);
+            this.lbNumPremio.Size = new System.Drawing.Size(0, 13);
             this.lbNumPremio.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 39);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(21, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 17);
+            this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Numero Ganador:";
             // 
@@ -395,10 +365,9 @@
             // 
             this.btnRepetir.BackColor = System.Drawing.Color.Blue;
             this.btnRepetir.Enabled = false;
-            this.btnRepetir.Location = new System.Drawing.Point(120, 475);
-            this.btnRepetir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRepetir.Location = new System.Drawing.Point(90, 386);
             this.btnRepetir.Name = "btnRepetir";
-            this.btnRepetir.Size = new System.Drawing.Size(164, 34);
+            this.btnRepetir.Size = new System.Drawing.Size(123, 28);
             this.btnRepetir.TabIndex = 5;
             this.btnRepetir.Text = "Volver a jugar";
             this.btnRepetir.UseVisualStyleBackColor = false;
@@ -407,10 +376,9 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnExit.Location = new System.Drawing.Point(500, 475);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(375, 386);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(164, 34);
+            this.btnExit.Size = new System.Drawing.Size(123, 28);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Dejar de Jugar";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -419,10 +387,9 @@
             // btnApostar
             // 
             this.btnApostar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnApostar.Location = new System.Drawing.Point(305, 475);
-            this.btnApostar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnApostar.Location = new System.Drawing.Point(229, 386);
             this.btnApostar.Name = "btnApostar";
-            this.btnApostar.Size = new System.Drawing.Size(169, 34);
+            this.btnApostar.Size = new System.Drawing.Size(127, 28);
             this.btnApostar.TabIndex = 7;
             this.btnApostar.Text = "Apostar";
             this.btnApostar.UseVisualStyleBackColor = false;
@@ -432,22 +399,29 @@
             // 
             this.lbApuesta.AutoSize = true;
             this.lbApuesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApuesta.Location = new System.Drawing.Point(220, 30);
+            this.lbApuesta.Location = new System.Drawing.Point(165, 24);
+            this.lbApuesta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbApuesta.Name = "lbApuesta";
-            this.lbApuesta.Size = new System.Drawing.Size(96, 25);
+            this.lbApuesta.Size = new System.Drawing.Size(77, 20);
             this.lbApuesta.TabIndex = 9;
             this.lbApuesta.Text = "Apuesta: ";
             // 
             // nudApuesta
             // 
-            this.nudApuesta.Location = new System.Drawing.Point(322, 35);
+            this.nudApuesta.Location = new System.Drawing.Point(242, 28);
+            this.nudApuesta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudApuesta.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
+            this.nudApuesta.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.nudApuesta.Name = "nudApuesta";
-            this.nudApuesta.Size = new System.Drawing.Size(120, 22);
+            this.nudApuesta.Size = new System.Drawing.Size(90, 20);
             this.nudApuesta.TabIndex = 10;
             this.nudApuesta.Value = new decimal(new int[] {
             10,
@@ -457,10 +431,10 @@
             // 
             // Casino
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(799, 544);
+            this.ClientSize = new System.Drawing.Size(599, 442);
             this.Controls.Add(this.nudApuesta);
             this.Controls.Add(this.lbApuesta);
             this.Controls.Add(this.btnApostar);
@@ -470,7 +444,7 @@
             this.Controls.Add(this.gbApuestas);
             this.Controls.Add(this.lbSaldo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Casino";
             this.Text = "Casino";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Casino_FormClosing);
