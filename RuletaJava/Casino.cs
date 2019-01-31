@@ -346,7 +346,7 @@ namespace RuletaJava
         private void btnRepetir_Click(object sender, EventArgs e)
         {
 
-            if (saldo < 1)
+            if (saldo < 10)
             {
                 MessageBox.Show("Te has quedado sin saldo");
 
@@ -383,6 +383,11 @@ namespace RuletaJava
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (saldo>0)
+                MessageBox.Show("Te llevas " + saldo + "€");
+            
+
+
             Application.Exit();
         }
 

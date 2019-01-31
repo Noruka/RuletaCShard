@@ -393,6 +393,7 @@
             // 
             // btnRepetir
             // 
+            this.btnRepetir.BackColor = System.Drawing.Color.Blue;
             this.btnRepetir.Enabled = false;
             this.btnRepetir.Location = new System.Drawing.Point(120, 475);
             this.btnRepetir.Margin = new System.Windows.Forms.Padding(4);
@@ -400,29 +401,31 @@
             this.btnRepetir.Size = new System.Drawing.Size(164, 34);
             this.btnRepetir.TabIndex = 5;
             this.btnRepetir.Text = "Volver a jugar";
-            this.btnRepetir.UseVisualStyleBackColor = true;
+            this.btnRepetir.UseVisualStyleBackColor = false;
             this.btnRepetir.Click += new System.EventHandler(this.btnRepetir_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnExit.Location = new System.Drawing.Point(500, 475);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(164, 34);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Dejar de Jugar";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnApostar
             // 
+            this.btnApostar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnApostar.Location = new System.Drawing.Point(305, 475);
             this.btnApostar.Margin = new System.Windows.Forms.Padding(4);
             this.btnApostar.Name = "btnApostar";
             this.btnApostar.Size = new System.Drawing.Size(169, 34);
             this.btnApostar.TabIndex = 7;
             this.btnApostar.Text = "Apostar";
-            this.btnApostar.UseVisualStyleBackColor = true;
+            this.btnApostar.UseVisualStyleBackColor = false;
             this.btnApostar.Click += new System.EventHandler(this.btnApostar_Click);
             // 
             // lbApuesta
@@ -456,6 +459,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(799, 544);
             this.Controls.Add(this.nudApuesta);
             this.Controls.Add(this.lbApuesta);
